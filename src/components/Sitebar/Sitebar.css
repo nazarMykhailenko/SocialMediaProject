@@ -1,3 +1,82 @@
 .sitebar {
   flex: 3;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 5px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: rgb(179, 179, 179);
+  border-radius: 10px;
+}
+
+.sitebarWrapper {
+  padding: 20px;
+}
+
+.sitebarList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sitebarItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sitebarIcon {
+  margin-right: 15px;
+}
+
+.sitebarListItemText {
+  cursor: pointer;
+}
+.sitebarListItemText:hover {
+  color: #1877f2;
+}
+
+.sitebarButton {
+  width: 150px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.sitebarHR {
+  margin: 20px 0;
+}
+
+.sitebarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sitebarFriend {
+  display: flex;
+  align-items: center;
+}
+.sitebarFriend:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.sitebarFriendImage {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
 }
