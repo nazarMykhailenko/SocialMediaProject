@@ -1,5 +1,12 @@
-function App() {
-  return <div>hello</div>;
-}
+// pages
+import Home from "./pages/Home/Home";
+
+const App = () => {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+};
 
 export default App;
