@@ -1,0 +1,86 @@
+.registration {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrationWrapper {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.registrationLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registrationRight {
+  flex: 1;
+}
+
+.registrationLogo {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1775ee;
+}
+
+.registrationDesc {
+  font-size: 24px;
+}
+
+.registrationBox {
+  height: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.registrationInput {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  font-size: 18px;
+  padding: 0 20px;
+}
+.registrationInput:focus {
+  outline: none;
+}
+
+.registrationButton {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1775ee;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.registrationForgot {
+  text-align: center;
+  color: #1775ee;
+}
+
+.registrationLoginButton {
+  width: 60%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #42b728;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
