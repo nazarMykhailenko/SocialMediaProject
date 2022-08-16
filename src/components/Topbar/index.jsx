@@ -7,8 +7,16 @@ import {
   Chat as ChatIcon,
   CircleNotifications as CircleNotificationsIcon,
 } from "@mui/icons-material";
+// libs
+import { useNavigate, Link } from "react-router-dom";
 
 function Topbar() {
+  const navigate = useNavigate();
+
+  // handlers
+  const onClickProfileImg = () => {
+    navigate(`/profile`);
+  };
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -26,7 +34,9 @@ function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
+          <Link to="/" className="topbarLink">
+            Homepage
+          </Link>
           <span className="topbarLink">Timeline</span>
         </div>
         <div className="topbarIcons">
@@ -43,7 +53,12 @@ function Topbar() {
             <span className="topbarIconCounter">0</span>
           </div>
         </div>
-        <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
+        <img
+          onClick={onClickProfileImg}
+          src="/assets/person/1.jpeg"
+          alt="profileImg"
+          className="topbarImg"
+        />
       </div>
     </div>
   );
