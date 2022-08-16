@@ -14,9 +14,9 @@ const Post = ({ userId, desc, photo, date, like, comment }) => {
   // handle
   const onClickLike = () => {
     if (!likeStatus) {
-      setLikeCount((likeCount += 1));
+      setLikeCount(likeCount + 1);
     } else {
-      setLikeCount((likeCount -= 1));
+      setLikeCount(likeCount - 1);
     }
     setLikeStatus(!likeStatus);
   };

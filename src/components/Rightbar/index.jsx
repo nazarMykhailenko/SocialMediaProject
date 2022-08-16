@@ -3,10 +3,10 @@ import { Users } from "../../data.js";
 // styles
 import "./Rightbar.css";
 
-const Rightbar = () => {
-  return (
-    <div className="rightbar">
-      <div className="rightbarWrapper">
+const Rightbar = ({ profile }) => {
+  const HomeRightbar = () => {
+    return (
+      <>
         <div className="birthdayContainer">
           <img src="/assets/gift.png" alt="giftImg" className="birthdayImg" />
           <span className="birthdayText">
@@ -30,6 +30,86 @@ const Rightbar = () => {
             </li>
           ))}
         </ul>
+      </>
+    );
+  };
+
+  const ProfileRightbar = () => {
+    return (
+      <>
+        <h4 className="rightbarTitleProfile">User Information</h4>
+        <div className="rightbarInfo">
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">City:</span>
+            <span className="rightbarInfoValue">London</span>
+          </div>
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">From:</span>
+            <span className="rightbarInfoValue">Kyiv</span>
+          </div>
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">Reletionship:</span>
+            <span className="rightbarInfoValue">Single</span>
+          </div>
+        </div>
+        <h4 className="rightbarTitleProfile">User Followings</h4>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt="rightbarFollowingImg"
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFolloringName">Jhon Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt="rightbarFollowingImg"
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFolloringName">Jhon Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt="rightbarFollowingImg"
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFolloringName">Jhon Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt="rightbarFollowingImg"
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFolloringName">Jhon Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt="rightbarFollowingImg"
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFolloringName">Jhon Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt="rightbarFollowingImg"
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFolloringName">Jhon Carter</span>
+          </div>
+        </div>
+      </>
+    );
+  };
+  return (
+    <div className="rightbar">
+      <div className="rightbarWrapper">
+        {profile ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   );
