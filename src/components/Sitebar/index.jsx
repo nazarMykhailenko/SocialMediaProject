@@ -1,5 +1,5 @@
-// styles
-import "./Sitebar.css";
+// data
+import { Users } from "../../data.js";
 // icons
 import {
   RssFeed as FeedIcon,
@@ -12,6 +12,8 @@ import {
   Event as EventIcon,
   School as SchoolIcon,
 } from "@mui/icons-material";
+// styles
+import "./Sitebar.css";
 
 const Sitebar = () => {
   return (
@@ -58,54 +60,16 @@ const Sitebar = () => {
         <button className="sitebarButton">Show More</button>
         <hr className="sitebarHR" />
         <ul className="sitebarFriendList">
-          <li className="sitebarFriend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt="friendImg"
-              className="sitebarFriendImage"
-            />
-            <span className="sitebarFriendName">Jane Doe</span>
-          </li>
-          <li className="sitebarFriend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt="friendImg"
-              className="sitebarFriendImage"
-            />
-            <span className="sitebarFriendName">Jane Doe</span>
-          </li>
-          <li className="sitebarFriend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt="friendImg"
-              className="sitebarFriendImage"
-            />
-            <span className="sitebarFriendName">Jane Doe</span>
-          </li>
-          <li className="sitebarFriend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt="friendImg"
-              className="sitebarFriendImage"
-            />
-            <span className="sitebarFriendName">Jane Doe</span>
-          </li>
-          <li className="sitebarFriend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt="friendImg"
-              className="sitebarFriendImage"
-            />
-            <span className="sitebarFriendName">Jane Doe</span>
-          </li>
-          <li className="sitebarFriend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt="friendImg"
-              className="sitebarFriendImage"
-            />
-            <span className="sitebarFriendName">Jane Doe</span>
-          </li>
+          {Users.map((user) => (
+            <li key={user.id} className="sitebarFriend">
+              <img
+                src={user.profilePicture}
+                alt="friendImg"
+                className="sitebarFriendImage"
+              />
+              <span className="sitebarFriendName">{user.username}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

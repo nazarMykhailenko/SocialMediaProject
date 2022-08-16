@@ -1,6 +1,8 @@
 // components
 import Share from "../Share";
 import Post from "../Post";
+// data
+import { Posts } from "../../data.js";
 // styles
 import "./Feed.css";
 
@@ -9,12 +11,9 @@ const Feed = () => {
     <div className="feed">
       <div className="feedWrapper">
         <Share />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {Posts.map((post) => (
+          <Post key={post.id} {...post} />
+        ))}
       </div>
     </div>
   );
